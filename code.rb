@@ -5,8 +5,14 @@ require "pry"
   item = gets.chomp
   puts "How many of that item would you like?"
   amount = gets.chomp
+  amount_array = amount.split(' ')
 
-  if amount == "tons"
+  amount_array.index("tons")
+  if amount_array.index("tons").nil?
+    amount.to_i.times do
+      puts item
+    end
+  elsif amount_array.index("tons") >= 0
     puts item
     random_number = rand(14)
     while random_number = rand(14) do
@@ -15,9 +21,5 @@ require "pry"
       else
         break
       end
-    end
-  else
-    amount.to_i.times do
-      puts item
     end
   end
