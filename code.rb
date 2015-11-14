@@ -16,8 +16,8 @@ require "pry"
         break
       end
     end
-  end
-
-  amount.to_i.times do
-    puts item
+  else
+    amount.to_i.times do
+      puts item
+    end
   end
